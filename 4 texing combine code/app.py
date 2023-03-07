@@ -56,7 +56,6 @@ def spellingChecker():
     sentence = transcript_Data
     print(transcript_Data)
     words = nltk.word_tokenize(sentence)
-    #print(words)
     misspelled_words = []
     vocab_levels = []
     for word in words:
@@ -99,7 +98,8 @@ def lexicon_score():
 
     # Tokenize the sentence using spaCy
     doc = nlp(transcript_Data)
-
+    wordcount = len(doc)
+    print("length in complex",len(doc))
     complex_words = []
     complex_phrases = []
 
@@ -114,6 +114,7 @@ def lexicon_score():
     results = {"complex_words": complex_words}
     results['complex_phrases'] = complex_phrases
     results['grade_level'] = grade_level
+    results['wordcount'] = wordcount
     return jsonify(results)
 
 
