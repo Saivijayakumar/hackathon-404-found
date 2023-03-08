@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Speech Evaluation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Speech Evaluation</h1>
+    <div class="container">
+      <div class="audio-container">
+        <input type="file" id="audio-file">
+        <button onclick="convertAudio()">Convert</button>
+      </div>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="toggle-button">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="button-container">
+        <button id="start-recording">Start Recording</button>
+        <button id="stop-recording">Stop Recording</button>
+      </div>
+    </div>
+    <h1 id="Transcribe"></h1>
+    <p id="result"></p>
+    <h1 id="score"></h1>
+    <div class="misspelled"><p id="misspelled_result"></p></div>
+    <p id="complex_phrases"></p>
+    <script src="index.js"></script>
+  </body>
+</html>
