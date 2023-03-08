@@ -145,7 +145,7 @@ function spellingcheck(){
     });
     
     // Display both results
-    misspelled_result.innerHTML = misspelledWordsResult +"<hr>"+"Percentage of parts of speech for "+ wordcount+" words in Transcribe"+
+    misspelled_result.innerHTML = misspelledWordsResult +"<hr>"+"Percentage of parts of speech out of "+ wordcount+" words in Transcribe"+
     "<br>" +otherResults;
     
   })
